@@ -1,0 +1,12 @@
+# Gamemaker Studio 2 Ignore Rules
+*.bak
+*.tmp
+*.yy.bak
+*.yy.tmp
+/audio/
+/configs/
+/node_modules/
+/external/
+/assets/raw/
+/Backups/
+/logs/
