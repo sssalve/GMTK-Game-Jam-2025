@@ -1,0 +1,1 @@
+#macro ROOM_SPEED 60

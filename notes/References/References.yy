@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"References",
+  "name":"References",
+  "parent":{
+    "name":"GameJam_2025",
+    "path":"GameJam_2025.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

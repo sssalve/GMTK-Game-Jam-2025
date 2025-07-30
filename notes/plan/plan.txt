@@ -1,0 +1,7 @@
+Create a Deathloop Metrovania game
+
+Player will continuously die and explore.
+dying will unlock new areas and help player progress
+dying is manditory to get past obstacles
+The player will have to try and find ways to die, they need to be suicidal lol
+

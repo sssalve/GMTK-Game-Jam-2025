@@ -1,0 +1,40 @@
+Priority
+- Nice platforming movement------------------DONE------------------------
+	* Coyote time
+	- snappy & smooth direction change
+	* good jump feel
+	* potetial double jump
+	
+- smooth player camera
+	- add camera shake eventually
+
+- basic level layouts without hazards
+	- Mark future hazard areas 
+	- Plan out the path to win
+	- potentially multiple routes?
+	- Centeral zone with branching paths
+	
+- Death system
+	- Checkpoints that look for player death triggers, then the zone does something
+	- Checkpoints are individual objects and need to be specifically designed
+		- 10 - 15 checkpoints
+		
+		
+If time permits
+- Narrative
+	- You are trpped in a dying digital world
+	- a small robot is stuck and needs you to find the exit before its all over
+	- you keep looking for an exit and dying
+	- the robot makes comments when you respawn to show that its a loop
+	- Once you find the exit you can just go through or go back and grab the robot
+	- he will be very happy if you save him
+	
+- visuals
+	- death locations show a player ghost
+	- areas where death should happen have a blurred/glitched effect that disapears when the player successfully dies
+	
+- Nice aesthetic for the digital world
+	- might need to good at pixel art REALLY fast
+	
+	
+	
