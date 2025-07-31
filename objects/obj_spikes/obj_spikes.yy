@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_lava",
+  "%Name":"obj_spikes",
   "eventList":[],
   "managed":true,
-  "name":"obj_lava",
+  "name":"obj_spikes",
   "overriddenProperties":[],
   "parent":{
     "name":"Hazards",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lava",
-    "path":"sprites/spr_lava/spr_lava.yy",
+    "name":"spr_spikes",
+    "path":"sprites/spr_spikes/spr_spikes.yy",
   },
   "spriteMaskId":null,
   "visible":true,

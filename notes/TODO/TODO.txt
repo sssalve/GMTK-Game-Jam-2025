@@ -5,7 +5,7 @@ Priority
 	* good jump feel
 	* potetial double jump
 	
-- smooth player camera
+- smooth player camera----------------------DONE------------------------
 	- add camera shake eventually
 
 - basic level layouts without hazards

@@ -29,4 +29,5 @@ cur_death_checkpoint = noone;
 is_dead = false;
 is_on_fire = false;
 max_on_fire_time = 180; // 3 seconds
-on_fire_countdown = 0;
+on_fire_countdown = max_on_fire_time;
+is_on_spikes = false;

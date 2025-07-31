@@ -148,7 +148,7 @@ function AnimatePlayer()
 function CheckPlayerDeath()
 {
 	
-	// lava check
+	// lava check-----------------------------------------------------
 	if (place_meeting(x, y, obj_lava))
 	{
 		if (!is_on_fire)
@@ -164,13 +164,25 @@ function CheckPlayerDeath()
 	}
 	else
 	{
-		is_on_fire = false;
+		if (on_fire_countdown >= 0 && on_fire_countdown < max_on_fire_time)
+		{
+			on_fire_countdown += 0.1;
+			if (on_fire_countdown >= max_on_fire_time) is_on_fire = false;
+		}
+	}
+	
+	// spikes check -----------------------------------------------------
+	if (place_meeting(x, y, obj_spikes))
+	{
+		KillPlayer();
 	}
 }
 
 function KillPlayer()
 {
 	is_dead = true;
+	is_on_fire = false;
+	on_fire_countdown = max_on_fire_time;
 	global.player_deaths += 1;
 }
 
