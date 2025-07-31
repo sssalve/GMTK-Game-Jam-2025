@@ -174,9 +174,11 @@ function CheckPlayerDeath()
 		else
 		{
 			on_fire_countdown -= 1;
-			if (on_fire_countdown <= 0) KillPlayer();
-			
-			if (cur_death_checkpoint == noone) ResetPlayer();
+			if (on_fire_countdown <= 0) 
+			{
+				KillPlayer();
+				if (cur_death_checkpoint == noone) ResetPlayer();
+			}
 		}
 	}
 	else
@@ -234,13 +236,10 @@ function CheckPlayerDeath()
 function KillPlayer()
 {
 	is_dead = true;
-	is_on_fire = false;
-	drank_poison = false;
-	on_fire_countdown = max_on_fire_time;
 	global.player_deaths += 1;
 	
 	// create ghost
-	if (!place_meeting(x, y, obj_spawn_area)) instance_create_layer(x, y, "Instances", obj_ghost);
+	if (!place_meeting(x, y, obj_spawn_area) && !place_meeting(x, y, obj_ghost)) instance_create_layer(x, y, "Instances", obj_ghost);
 }
 
 function ResetPlayer()
@@ -248,6 +247,9 @@ function ResetPlayer()
 	obj_player.x = obj_player.reset_x;
 	obj_player.y = obj_player.reset_y;
 	obj_player.is_dead = false;
+	obj_player.is_on_fire = false;
+	obj_player.drank_poison = false;
+	obj_player.on_fire_countdown = obj_player.max_on_fire_time;
 }
 
 function CheckPlayerPickup()
