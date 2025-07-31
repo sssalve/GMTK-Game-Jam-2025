@@ -26,6 +26,7 @@
     {"name":"obj_ui","order":1,"path":"objects/obj_ui/obj_ui.yy",},
     {"name":"rm_level","order":2,"path":"rooms/rm_level/rm_level.yy",},
     {"name":"rm_main_menu","order":1,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
+    {"name":"PlayerScripts","order":1,"path":"scripts/PlayerScripts/PlayerScripts.yy",},
     {"name":"spr_background_props","order":3,"path":"sprites/spr_background_props/spr_background_props.yy",},
     {"name":"spr_background","order":2,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_buildings","order":5,"path":"sprites/spr_buildings/spr_buildings.yy",},
@@ -33,7 +34,6 @@
     {"name":"spr_props","order":6,"path":"sprites/spr_props/spr_props.yy",},
     {"name":"spr_solid_tiles","order":4,"path":"sprites/spr_solid_tiles/spr_solid_tiles.yy",},
     {"name":"spr_tile_collision","order":8,"path":"sprites/spr_tile_collision/spr_tile_collision.yy",},
-    {"name":"Sprite8","order":7,"path":"sprites/Sprite8/Sprite8.yy",},
     {"name":"ts_collision_mask","order":1,"path":"tilesets/ts_collision_mask/ts_collision_mask.yy",},
   ],
 }

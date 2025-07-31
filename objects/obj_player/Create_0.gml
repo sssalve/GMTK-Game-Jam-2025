@@ -15,3 +15,9 @@ grounded = false;
 coyote_timer = 0;
 jump_buffer_timer = 0;
 facing = 1;
+
+// animation
+anim_frame = 0;
+anim_speed = 0.2; 
+anim_timer = 0;
+is_moving = false;
