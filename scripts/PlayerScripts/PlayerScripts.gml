@@ -9,6 +9,11 @@ function PlayerMove(){
 
 	// get tilemap for collision
 	var collision_layer = layer_tilemap_get_id("Ground");
+	// check if in death checkpoint zone
+	if (place_meeting(x, y, obj_death_checkpoint))
+	{
+		cur_death_checkpoint = instance_nearest(x, y, obj_death_checkpoint);
+	}
 
 	// horizontal move
 	var move = (key_right - key_left) * move_speed;
@@ -32,7 +37,7 @@ function PlayerMove(){
 		}
 	}
 
-	grounded = (instance_place(x, y + 1, collision_layer) != noone); 
+	grounded = (instance_place(x, y + 1, collision_layer) != noone || instance_place(x, y + 1, obj_solid) != noone); 
 
 	// coyote time logic
 	if (grounded) {
@@ -75,10 +80,10 @@ function PlayerMove(){
 
 	// horizontal collision
 	if (hsp != 0) {
-	    if (instance_place(x + hsp, y, collision_layer) != noone) {
+	    if (instance_place(x + hsp, y, collision_layer) != noone || instance_place(x + hsp, y, obj_solid) != noone) {
 	        // move as close as possible to the wall
 	        var _step = sign(hsp);
-	        while (instance_place(x + _step, y, collision_layer) == noone) {
+	        while (instance_place(x + _step, y, collision_layer) == noone && instance_place(x + _step, y, obj_solid) == noone) {
 	            x += _step;
 	        }
 	        hsp = 0;
@@ -88,10 +93,10 @@ function PlayerMove(){
 
 	// vertical collision
 	if (vsp != 0) {
-	    if (instance_place(x, y + vsp, collision_layer) != noone) {
+	    if (instance_place(x, y + vsp, collision_layer) != noone || instance_place(x, y + vsp, obj_solid) != noone) {
 	        // move as close as possible to the floor/ceiling
 	        var _step = sign(vsp);
-	        while (instance_place(x, y + _step, collision_layer) == noone) {
+	        while (instance_place(x, y + _step, collision_layer) == noone && instance_place(x, y + _step, obj_solid) == noone) {
 	            y += _step;
 	        }
         
@@ -108,7 +113,7 @@ function PlayerMove(){
 
 	// final ground check
 	if (vsp >= 0) { // only check if we're not moving up
-	    if (instance_place(x, y + 1, collision_layer) != noone) {
+	    if (instance_place(x, y + 1, collision_layer) != noone || instance_place(x, y + 1, obj_solid) != noone) {
 	        grounded = true;
 	    }
 	}
@@ -165,7 +170,13 @@ function CheckPlayerDeath()
 
 function KillPlayer()
 {
-	x = reset_x;
-	y = reset_y;
+	is_dead = true;
 	global.player_deaths += 1;
+}
+
+function ResetPlayer()
+{
+	obj_player.x = obj_player.reset_x;
+	obj_player.y = obj_player.reset_y;
+	obj_player.is_dead = false;
 }
