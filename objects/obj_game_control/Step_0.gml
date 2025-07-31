@@ -10,5 +10,5 @@ if (global.current_room = rm_main_menu)
 }
 else if (global.current_room = rm_level)
 {
-	
+	if (keyboard_check_pressed(vk_escape)) global.game_paused = !global.game_paused;
 }

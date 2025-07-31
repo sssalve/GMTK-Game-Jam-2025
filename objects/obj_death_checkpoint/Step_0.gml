@@ -13,6 +13,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				if (instance_exists(obj_door_1))
 				{
 					instance_deactivate_object(obj_door_1);
+					global.dialogue_id = 1;
 				}
 				else instance_activate_object(obj_door_1); //instance_create_layer(672, 240, "Instances", obj_door_1);
 				ResetPlayer();	
@@ -33,12 +34,13 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			else instance_activate_object(obj_door_3);
 			ResetPlayer();
 			break;
-		case 4:
-			if (instance_exists(obj_door_4))
+		case 4: // the door beneath the lava
+			if (instance_exists(obj_door_4) && _player.drank_poison)
 			{
 				instance_deactivate_object(obj_door_4);
 			}
 			else instance_activate_object(obj_door_4);
+			ResetPlayer();
 			break;
 	}
 }

@@ -1,3 +1,5 @@
+if (!global.game_paused) {
+
 var _player = instance_find(obj_player, 0);
 
 if (instance_exists(_player)) {
@@ -83,3 +85,5 @@ if (glitch_enabled) {
         glitch_timer = glitch_duration;
     }
 }
+
+} // end of game paused check
