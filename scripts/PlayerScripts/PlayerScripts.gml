@@ -14,6 +14,10 @@ function PlayerMove(){
 	{
 		cur_death_checkpoint = instance_nearest(x, y, obj_death_checkpoint);
 	}
+	else
+	{
+		cur_death_checkpoint = noone;
+	}
 
 	// horizontal move
 	var move = (key_right - key_left) * move_speed;
@@ -191,7 +195,7 @@ function CheckPlayerDeath()
 		if (cur_death_checkpoint == noone) ResetPlayer();
 	}
 	
-	// poison check
+	// poison check -------------------------------------------------------
 	if (drank_poison)
 	{
 		poison_countdown--;
@@ -205,6 +209,26 @@ function CheckPlayerDeath()
 	{
 		poison_countdown = max_poison_time
 	}
+	
+	// ghost check ----------------------------------------------------------
+	if (place_meeting(x, y, obj_ghost))
+	{
+		var _ghost = instance_nearest(x, y, obj_ghost);
+		if (_ghost.is_active)
+		{
+			if (cur_death_checkpoint == noone)
+			{
+				KillPlayer();
+				ResetPlayer();
+				instance_destroy(_ghost, true);
+			}
+			else
+			{
+				KillPlayer();
+				instance_destroy(_ghost, true);
+			}	
+		}
+	}
 }
 
 function KillPlayer()
@@ -214,6 +238,9 @@ function KillPlayer()
 	drank_poison = false;
 	on_fire_countdown = max_on_fire_time;
 	global.player_deaths += 1;
+	
+	// create ghost
+	if (!place_meeting(x, y, obj_spawn_area)) instance_create_layer(x, y, "Instances", obj_ghost);
 }
 
 function ResetPlayer()

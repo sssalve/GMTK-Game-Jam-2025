@@ -18,6 +18,10 @@ Priority
 	- Checkpoints that look for player death triggers, then the zone does something
 	- Checkpoints are individual objects and need to be specifically designed
 		- 10 - 15 checkpoints
+	* Lava
+	* Spikes
+	* Poison
+	* Ghost
 		
 		
 If time permits
