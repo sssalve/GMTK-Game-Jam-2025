@@ -7,7 +7,5 @@ if (global.current_room = rm_main_menu)
 }
 else if (global.current_room = rm_level)
 {
-	draw_set_font(fnt_techy);
-	draw_text(x, y, string(global.player_deaths));
 	
 }

@@ -1,12 +1,12 @@
-if (!global.game_paused && global.dialogue_id != -1)
+if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 {
-	if (global.dialoge_flags[global.dialogue_id] == 0)
+	if (global.dialogue_flags[global.dialogue_id] == 0)
 	{
 		global.in_dialogue = true;
 	}
 	else
 	{
-		global.dialogue_id = -1
+		global.dialogue_id = -1;
 		return;
 	}
 	
@@ -32,7 +32,7 @@ if (!global.game_paused && global.dialogue_id != -1)
 	// check if dialogue is done.
 	if (current_line >= array_length(dialogue_lines))
 	{
-		global.dialoge_flags[global.dialogue_id] = 1;
+		global.dialogue_flags[global.dialogue_id] = 1;
 		global.in_dialogue = false;
 		global.dialogue_id = -1;
 		current_line = 0;
