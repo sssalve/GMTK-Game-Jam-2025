@@ -49,6 +49,10 @@ function PlayerMove(){
 	    }
 	}
 
+	// prevent double jump if holding item
+	if (held_item != noone) has_double_jump = false;
+	else has_double_jump = true;
+
 	// jump
 	if (key_jump) {
 	    jump_buffer_timer = jump_buffer_time * ROOM_SPEED;
@@ -117,6 +121,13 @@ function PlayerMove(){
 	        grounded = true;
 	    }
 	}
+	
+	// hang onto item
+	if (held_item != noone)
+	{
+		held_item.x = x;
+		held_item.y = y;
+	}
 }
 	
 function AnimatePlayer()
@@ -160,6 +171,8 @@ function CheckPlayerDeath()
 		{
 			on_fire_countdown -= 1;
 			if (on_fire_countdown <= 0) KillPlayer();
+			
+			if (cur_death_checkpoint == noone) ResetPlayer();
 		}
 	}
 	else
@@ -175,6 +188,22 @@ function CheckPlayerDeath()
 	if (place_meeting(x, y, obj_spikes))
 	{
 		KillPlayer();
+		if (cur_death_checkpoint == noone) ResetPlayer();
+	}
+	
+	// poison check
+	if (drank_poison)
+	{
+		poison_countdown--;
+		if (poison_countdown <= 0)
+		{
+			KillPlayer();
+			if (cur_death_checkpoint == noone) ResetPlayer();	
+		}
+	}
+	else
+	{
+		poison_countdown = max_poison_time
 	}
 }
 
@@ -182,6 +211,7 @@ function KillPlayer()
 {
 	is_dead = true;
 	is_on_fire = false;
+	drank_poison = false;
 	on_fire_countdown = max_on_fire_time;
 	global.player_deaths += 1;
 }
@@ -191,4 +221,12 @@ function ResetPlayer()
 	obj_player.x = obj_player.reset_x;
 	obj_player.y = obj_player.reset_y;
 	obj_player.is_dead = false;
+}
+
+function CheckPlayerPickup()
+{
+	if (place_meeting(x, y, obj_item) && held_item == noone)
+	{
+		held_item = instance_nearest(x ,y, obj_item);
+	}
 }

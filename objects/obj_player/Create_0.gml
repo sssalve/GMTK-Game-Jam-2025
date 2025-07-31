@@ -18,6 +18,9 @@ facing = 1;
 reset_x = x;
 reset_y = y;
 
+// items
+held_item = noone;
+
 // animation
 anim_frame = 0;
 anim_speed = 0.2; 
@@ -28,6 +31,9 @@ is_moving = false;
 cur_death_checkpoint = noone;
 is_dead = false;
 is_on_fire = false;
-max_on_fire_time = 180; // 3 seconds
+max_on_fire_time = 3 * 60; // 3 seconds
 on_fire_countdown = max_on_fire_time;
 is_on_spikes = false;
+drank_poison = false;
+max_poison_time = 10 * 60; // ten seconds
+poison_countdown = max_poison_time;
