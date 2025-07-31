@@ -15,7 +15,10 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 					instance_deactivate_object(obj_door_1);
 					global.dialogue_id = 1;
 				}
-				else instance_activate_object(obj_door_1); //instance_create_layer(672, 240, "Instances", obj_door_1);
+				else {
+					instance_activate_object(obj_door_1); //instance_create_layer(672, 240, "Instances", obj_door_1);
+					global.dialogue_id = 2;				
+				}
 				ResetPlayer();	
 			}
 			break;
@@ -30,6 +33,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			if (instance_exists(obj_door_3))
 			{
 				instance_deactivate_object(obj_door_3);
+				global.dialogue_id = 4;
 			}
 			else instance_activate_object(obj_door_3);
 			ResetPlayer();
@@ -38,8 +42,26 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			if (instance_exists(obj_door_4) && _player.drank_poison)
 			{
 				instance_deactivate_object(obj_door_4);
+				global.dialogue_id = 3;
 			}
 			else instance_activate_object(obj_door_4);
+			ResetPlayer();
+			break;
+		case 5: // spawn trapdoor
+			if (instance_exists(obj_door_5) && _player.drank_poison)
+			{
+				instance_deactivate_object(obj_door_5);
+			}
+			else instance_activate_object(obj_door_5);
+			ResetPlayer();
+			break;
+		case 6:
+			if (instance_exists(obj_door_6))
+			{
+				instance_deactivate_object(obj_door_6);
+				instance_activate_object(obj_door_5);
+			}
+			else instance_activate_object(obj_door_6);
 			ResetPlayer();
 			break;
 	}

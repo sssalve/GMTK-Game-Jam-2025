@@ -1,4 +1,11 @@
 function DoSomething()
 {
-	instance_destroy(self, true);
+	x = -10;
+	y = -10;
+}
+
+function ResetItem()
+{
+	x = reset_x;
+	y = reset_y;
 }

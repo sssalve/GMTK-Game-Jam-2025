@@ -52,10 +52,9 @@ function PlayerMove(){
 	        grounded = false; 
 	    }
 	}
-
+	
 	// prevent double jump if holding item
 	if (held_item != noone) has_double_jump = false;
-	else has_double_jump = true;
 
 	// jump
 	if (key_jump) {
@@ -250,6 +249,7 @@ function ResetPlayer()
 	obj_player.is_on_fire = false;
 	obj_player.drank_poison = false;
 	obj_player.on_fire_countdown = obj_player.max_on_fire_time;
+	obj_item.ResetItem();
 }
 
 function CheckPlayerPickup()

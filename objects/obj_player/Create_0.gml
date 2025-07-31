@@ -15,8 +15,8 @@ grounded = false;
 coyote_timer = 0;
 jump_buffer_timer = 0;
 facing = 1;
-reset_x = x;
-reset_y = y;
+reset_x = 592;
+reset_y = 384;
 
 // items
 held_item = noone;

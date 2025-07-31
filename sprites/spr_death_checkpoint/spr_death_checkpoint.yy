@@ -13,13 +13,17 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"f21c6135-0609-4679-ac24-33d641d9cdcd","name":"f21c6135-0609-4679-ac24-33d641d9cdcd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"61ed2a99-afbd-4717-9ffb-fb5e2d4efd04","name":"61ed2a99-afbd-4717-9ffb-fb5e2d4efd04","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"5e803cff-b71a-4e05-a486-ae28e53cc50f","name":"5e803cff-b71a-4e05-a486-ae28e53cc50f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1929c877-daef-4f21-87cf-2f44c1584e31","name":"1929c877-daef-4f21-87cf-2f44c1584e31","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"9fae2128-7f01-4144-b712-012b75394e1c","name":"9fae2128-7f01-4144-b712-012b75394e1c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"0499fec6-6e06-4c85-bd59-cfcb4d5a8b64","blendMode":0,"displayName":"default","isLocked":false,"name":"0499fec6-6e06-4c85-bd59-cfcb4d5a8b64","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0499fec6-6e06-4c85-bd59-cfcb4d5a8b64","blendMode":0,"displayName":"default","isLocked":false,"name":"0499fec6-6e06-4c85-bd59-cfcb4d5a8b64","opacity":40.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_death_checkpoint",
   "nineSlice":null,
@@ -49,7 +53,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":5.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -59,7 +63,7 @@
     },
     "name":"spr_death_checkpoint",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":10.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -73,6 +77,18 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f21c6135-0609-4679-ac24-33d641d9cdcd","path":"sprites/spr_death_checkpoint/spr_death_checkpoint.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1cd869d5-8032-41e4-91f4-2df15102143b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"61ed2a99-afbd-4717-9ffb-fb5e2d4efd04","path":"sprites/spr_death_checkpoint/spr_death_checkpoint.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6eabc82e-4dc4-4589-97a4-662f84c0b349","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e803cff-b71a-4e05-a486-ae28e53cc50f","path":"sprites/spr_death_checkpoint/spr_death_checkpoint.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"445a4087-095e-4e70-ab82-dd190be92ead","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1929c877-daef-4f21-87cf-2f44c1584e31","path":"sprites/spr_death_checkpoint/spr_death_checkpoint.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"df049c15-2c17-48f0-a2ef-4c3c5368cc9c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9fae2128-7f01-4144-b712-012b75394e1c","path":"sprites/spr_death_checkpoint/spr_death_checkpoint.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"447c4a41-32c4-4d38-bdc2-1b0a36a0b219","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
