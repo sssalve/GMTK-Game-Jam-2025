@@ -1,9 +1,10 @@
-var cam_width = camera_get_view_width(view_camera[0]);
-var cam_height = camera_get_view_height(view_camera[0]);
+if (follow_target != noone)
+{
+	x_to = follow_target.x;
+	y_to = follow_target.y;
+}
 
-// get position
-var cam_x = (obj_player.x + (cam_lead * obj_player.facing)) - cam_width/2;
-var cam_y = obj_player - cam_y/2;
+x += (x_to - x)/cam_speed;
+y += (y_to - y)/cam_speed;
 
-// clamp  in room
-cam_x = clamp(cam_x, 0 , room_width/2)
+camera_set_view_pos(view_camera[0], x-(cam_width/2), y-(cam_height/2));

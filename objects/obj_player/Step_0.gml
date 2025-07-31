@@ -1,2 +1,3 @@
 PlayerMove();	
 AnimatePlayer();
+CheckPlayerDeath();

@@ -15,9 +15,16 @@ grounded = false;
 coyote_timer = 0;
 jump_buffer_timer = 0;
 facing = 1;
+reset_x = x;
+reset_y = y;
 
 // animation
 anim_frame = 0;
 anim_speed = 0.2; 
 anim_timer = 0;
 is_moving = false;
+
+// death checks
+is_on_fire = false;
+max_on_fire_time = 180; // 3 seconds
+on_fire_countdown = 0;

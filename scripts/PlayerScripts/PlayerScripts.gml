@@ -18,7 +18,9 @@ function PlayerMove(){
 	if (move != 0)
 	{
 		facing = sign(move);
+		is_moving = true;
 	}
+	else is_moving = false;
 
 	// gravity
 	if (!grounded)
@@ -114,7 +116,6 @@ function PlayerMove(){
 	
 function AnimatePlayer()
 {
-	is_moving = (hsp != 0);
 
 	if (is_moving) {
 	    anim_timer += 1;
@@ -137,4 +138,34 @@ function AnimatePlayer()
 
 	// normal speed
 	image_speed = 1;	
+}
+
+function CheckPlayerDeath()
+{
+	
+	// lava check
+	if (place_meeting(x, y, obj_lava))
+	{
+		if (!is_on_fire)
+		{
+			is_on_fire = true;
+			on_fire_countdown = max_on_fire_time;
+		}
+		else
+		{
+			on_fire_countdown -= 1;
+			if (on_fire_countdown <= 0) KillPlayer();
+		}
+	}
+	else
+	{
+		is_on_fire = false;
+	}
+}
+
+function KillPlayer()
+{
+	x = reset_x;
+	y = reset_y;
+	global.player_deaths += 1;
 }
