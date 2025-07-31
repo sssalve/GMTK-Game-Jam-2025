@@ -35,7 +35,10 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				instance_deactivate_object(obj_door_3);
 				global.dialogue_id = 4;
 			}
-			else instance_activate_object(obj_door_3);
+			else {
+				instance_activate_object(obj_door_3);
+				global.dialogue_id = 2;	
+			}
 			ResetPlayer();
 			break;
 		case 4: // the door beneath the lava
@@ -60,6 +63,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_6);
 				instance_activate_object(obj_door_5);
+				global.dialogue_id = 5;
 			}
 			else instance_activate_object(obj_door_6);
 			ResetPlayer();

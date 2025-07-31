@@ -1,3 +1,5 @@
+
+
 if (!global.game_paused && global.in_dialogue)
 {
     var h_padding = 0;  

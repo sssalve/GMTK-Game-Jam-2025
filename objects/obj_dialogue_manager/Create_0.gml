@@ -8,3 +8,5 @@ dialogue_lines= [];
 current_line = 0;
 
 dialogue_text = "";
+
+depth = -100;

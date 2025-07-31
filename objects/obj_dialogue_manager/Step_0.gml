@@ -49,6 +49,14 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"They are heavy, so you cant double jump with them"
 			]
 			break;
+		case 5:
+			dialogue_lines = [
+				"You seem to be making a lot of progress",
+				"You must be getting really close to the exit",
+				"If i remember correctly, the exit needs power",
+				"You will have to find a source of electricity",
+				"Then use it to power the exit door"
+			]
 	}
 	
 	// check if dialogue is done.

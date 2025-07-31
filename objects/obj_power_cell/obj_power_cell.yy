@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_item",
+  "%Name":"obj_power_cell",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_item",
+  "name":"obj_power_cell",
   "overriddenProperties":[],
   "parent":{
     "name":"Items",
     "path":"folders/Objects/Items.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_item",
+    "path":"objects/obj_item/obj_item.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,14 +28,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"reset_x","filters":[],"listItems":[],"multiselect":false,"name":"reset_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"reset_y","filters":[],"listItems":[],"multiselect":false,"name":"reset_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_power_cell",
+    "path":"sprites/spr_power_cell/spr_power_cell.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

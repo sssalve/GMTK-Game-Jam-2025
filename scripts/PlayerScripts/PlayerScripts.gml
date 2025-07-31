@@ -18,6 +18,17 @@ function PlayerMove(){
 	{
 		cur_death_checkpoint = noone;
 	}
+	
+	// check if player is touching a generator
+	if (place_meeting(x, y, obj_generator))
+	{
+		cur_generator = instance_nearest(x, y, obj_generator);
+		is_on_generator = true;
+	}
+	else {
+		cur_generator = noone;
+		is_on_generator = false;
+	}
 
 	// horizontal move
 	var move = (key_right - key_left) * move_speed;
@@ -230,6 +241,21 @@ function CheckPlayerDeath()
 			}	
 		}
 	}
+	
+	// battery check
+	if (ate_battery)
+	{
+		battery_countdown--;
+		if (battery_countdown <= 0)
+		{
+			KillPlayer();
+			if (cur_death_checkpoint == noone) ResetPlayer();	
+		}
+	}
+	else
+	{
+		battery_countdown = max_battery_time;
+	}
 }
 
 function KillPlayer()
@@ -248,6 +274,7 @@ function ResetPlayer()
 	obj_player.is_dead = false;
 	obj_player.is_on_fire = false;
 	obj_player.drank_poison = false;
+	obj_player.ate_battery = false;
 	obj_player.on_fire_countdown = obj_player.max_on_fire_time;
 	obj_item.ResetItem();
 }

@@ -26,6 +26,7 @@ anim_frame = 0;
 anim_speed = 0.2; 
 anim_timer = 0;
 is_moving = false;
+battery_flicker = false;
 
 // death checks
 cur_death_checkpoint = noone;
@@ -37,3 +38,10 @@ is_on_spikes = false;
 drank_poison = false;
 max_poison_time = 10 * 60; // ten seconds
 poison_countdown = max_poison_time;
+ate_battery = false;
+max_battery_time = 3 * 60; // 3 seconds
+battery_countdown = max_battery_time;
+
+// generators
+cur_generator = noone;
+is_on_generator = false;
