@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ground_single_tile",
-    "path":"sprites/spr_ground_single_tile/spr_ground_single_tile.yy",
+    "name":"spr_pipes",
+    "path":"sprites/spr_pipes/spr_pipes.yy",
   },
   "spriteMaskId":null,
   "visible":true,

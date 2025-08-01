@@ -139,8 +139,8 @@ function PlayerMove(){
 	// hang onto item
 	if (held_item != noone)
 	{
-		held_item.x = x;
-		held_item.y = y;
+		held_item.x = x+4;
+		held_item.y = y-8;
 	}
 }
 	
@@ -262,6 +262,12 @@ function KillPlayer()
 {
 	is_dead = true;
 	global.player_deaths += 1;
+	
+	// if holding an item
+	if (held_item != noone) {
+		held_item.ResetItem();
+		held_item = noone;
+	}
 	
 	// create ghost
 	if (!place_meeting(x, y, obj_spawn_area) && !place_meeting(x, y, obj_ghost)) instance_create_layer(x, y, "Instances", obj_ghost);

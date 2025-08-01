@@ -1,5 +1,5 @@
-move_speed = 2;
-jump_force = -3.2;
+move_speed = 1.8;
+jump_force = -3.6;
 p_gravity = 0.2;
 max_fall_speed = 8;
 

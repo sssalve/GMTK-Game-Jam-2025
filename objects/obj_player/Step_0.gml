@@ -19,6 +19,11 @@ else if (global.in_dialogue)
 {
 	if (keyboard_check_pressed(vk_space) || keyboard_check(vk_enter))
 	{
-		obj_dialogue_manager.current_line++;
+		if (obj_dialogue_manager.can_progress)
+		{
+			obj_dialogue_manager.current_line++;
+			obj_dialogue_manager.read_timer = obj_dialogue_manager.min_read_time;
+			obj_dialogue_manager.can_progress = false;
+		}
 	}
 }

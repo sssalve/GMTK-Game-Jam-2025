@@ -73,7 +73,7 @@ if (glitch_enabled) {
     
     // adjust based on state
     switch (state) {
-        case "Alert": _chance *= 2; break;
+        case "Alert": _chance *= 1; break;
         case "Aggro": _chance *= 4; break; 
     }
     

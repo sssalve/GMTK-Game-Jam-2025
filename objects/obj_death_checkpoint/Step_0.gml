@@ -8,7 +8,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			ResetPlayer();
 			break;
 		case 1: // gate top right of spawn room
-			if (_player.is_on_fire)
+			if (true) // a relic of changing to spikes instead of fire
 			{
 				if (instance_exists(obj_door_1))
 				{
@@ -36,8 +36,6 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				global.dialogue_id = 4;
 			}
 			else {
-				instance_activate_object(obj_door_3);
-				global.dialogue_id = 2;	
 			}
 			ResetPlayer();
 			break;
@@ -63,7 +61,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_6);
 				instance_activate_object(obj_door_5);
-				global.dialogue_id = 5;
+				global.dialogue_id = -1;
 			}
 			else instance_activate_object(obj_door_6);
 			ResetPlayer();

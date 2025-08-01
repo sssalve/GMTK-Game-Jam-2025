@@ -23,10 +23,11 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 		case 1: // first death
 			dialogue_lines = [
 				"Wait!! You're back!!",
-				"Dying in that glitched area did somethig",
-				"Looks like it opened that door over there",
+				"Dying in that glitchy area did something",
+				"Looks like it opened that door up there",
 				"You should go explore",
-				"Maybe you'll find a way out of here!"
+				"Maybe you'll find a way out of here!",
+				"Almost all doors have that blue ring"
 			]
 			break;
 		case 2: // closed door again lol
@@ -70,5 +71,12 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 	else
 	{
 		dialogue_text = dialogue_lines[current_line];
+		
+		// read timer
+		read_timer--
+		if (read_timer <= 0)
+		{
+			can_progress = true;
+		}
 	}
 }

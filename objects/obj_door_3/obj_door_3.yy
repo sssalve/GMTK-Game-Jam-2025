@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sr_hidden_opening",
-    "path":"sprites/sr_hidden_opening/sr_hidden_opening.yy",
+    "name":"spr_pipes",
+    "path":"sprites/spr_pipes/spr_pipes.yy",
   },
   "spriteMaskId":null,
   "visible":true,
