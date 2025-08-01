@@ -236,19 +236,15 @@ function CheckPlayerDeath()
 			{
 				KillPlayer();
 				ResetPlayer();
-				instance_destroy(_ghost, true);
-				global.ghost_count--;
 			}
 			else
 			{
 				KillPlayer();
-				instance_destroy(_ghost, true);
-				global.ghost_count--;
 			}	
 		}
 	}
 	
-	// battery check
+	// battery check----------------------------------------------------------------------
 	if (ate_battery)
 	{
 		battery_countdown--;
@@ -283,15 +279,9 @@ function KillPlayer()
 	}
 	
 	// create ghost
-	if (!place_meeting(x, y, obj_spawn_area) && !place_meeting(x, y, obj_ghost) && global.ghost_count < global.max_ghosts)
+	if (!place_meeting(x, y, obj_spawn_area))
 	{
-		instance_create_layer(x, y, "Instances", obj_ghost);
-		global.ghost_count++;
-	}
-	else if (global.ghost_count >= global.max_ghosts && instance_exists(obj_ghost))
-	{
-		var _ghost = instance_nearest(x, y, obj_ghost);
-		instance_destroy(_ghost, true);
+		if (instance_exists(obj_ghost)) instance_destroy(obj_ghost);
 		instance_create_layer(x, y, "Instances", obj_ghost);
 	}
 }
@@ -301,12 +291,13 @@ function ResetPlayer()
 	obj_player.x = obj_player.reset_x;
 	obj_player.y = obj_player.reset_y;
 	obj_player.is_dead = false;
+	obj_player.dying = false;
 	obj_player.is_on_fire = false;
 	obj_player.drank_poison = false;
 	obj_player.ate_battery = false;
 	obj_player.battery_pulse = 0;
 	obj_player.on_fire_countdown = obj_player.max_on_fire_time;
-	obj_item.ResetItem();
+	obj_item.ResetItem();	
 }
 
 function CheckPlayerPickup()
@@ -316,5 +307,3 @@ function CheckPlayerPickup()
 		held_item = instance_nearest(x ,y, obj_item);
 	}
 }
-
-

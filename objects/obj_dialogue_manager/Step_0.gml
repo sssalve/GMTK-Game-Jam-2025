@@ -27,7 +27,7 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"Looks like it opened that door up there",
 				"You should go explore",
 				"Maybe you'll find a way out of here!",
-				"Almost all doors have that blue ring"
+				"All doors have that blue ring"
 			]
 			break;
 		case 2: // closed door again lol
@@ -43,7 +43,7 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"Under the lava up there"
 			]
 			break;
-		case 4: // item introduction
+		case 4: // item introduction (rewrite)
 			dialogue_lines = [
 				"Nice, you opened another door!",
 				"By the way, you can pick up items by touching them",
@@ -56,13 +56,12 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"You seem to be making a lot of progress",
 				"You must be getting really close to the exit",
 				"If i remember correctly, the exit needs power",
-				"You will have to find a source of electricity",
-				"Then use it to power the exit door"
+				"You will have to find a source of electricity"
 			]
 		case 6: // first battery you ate, assuming no other dialogue
 			dialogue_lines = [
 				"Why would you eat a battery?",
-				"Well... you do you i guess"
+				"They have better uses than that"
 			]
 			break;
 		case 7: // ghost death

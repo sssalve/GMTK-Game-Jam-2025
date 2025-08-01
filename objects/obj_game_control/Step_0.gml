@@ -20,7 +20,6 @@ else if (global.current_room = rm_level)
 		global.player_deaths = 0;
 		global.game_paused = false;
 		global.in_dialogue = false;
-		global.ghost_count = 0;
 	}
 }
 

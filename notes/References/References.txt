@@ -2,5 +2,9 @@ Font:
 https://www.fontspace.com/qaaxee-font-f125823
 https://www.fontspace.com/aeogo-pixellated-font-f113784
 
-Assets:
+Textures:
 https://anokolisa.itch.io/sidescroller-shooter-central-city
+
+Sounds:
+https://freesound.org/people/cabled_mess/sounds/350898
+https://freesound.org/people/LilMati/sounds/495541

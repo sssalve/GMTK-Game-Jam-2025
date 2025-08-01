@@ -43,6 +43,14 @@ max_battery_time = 3 * 60; // 3 seconds
 battery_countdown = max_battery_time;
 battery_pulse = 0;
 
+// death animation
+dying = false;
+death_rotation = 0;       // Current rotation (0 = normal, 90 = facing up)
+death_float_speed = 1;    // How fast player floats upward
+death_fade_speed = 0.02;  // How fast player fades out
+death_alpha = 1;          // Current transparency
+death_complete = false;   // Tracks when animation finishes
+
 // generators
 cur_generator = noone;
 is_on_generator = false;

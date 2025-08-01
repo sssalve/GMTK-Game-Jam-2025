@@ -1,4 +1,4 @@
-if (!global.game_paused && !global.in_dialogue && !global.escaped){
+if (!global.game_paused && !global.in_dialogue && !global.escaped && !dying){
 
 PlayerMove();	
 AnimatePlayer();

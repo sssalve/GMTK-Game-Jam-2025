@@ -87,3 +87,5 @@ if (glitch_enabled) {
 }
 
 } // end of game paused check
+
+depth = -1;
