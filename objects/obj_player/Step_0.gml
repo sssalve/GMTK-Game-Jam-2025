@@ -1,4 +1,4 @@
-if (!global.game_paused && !global.in_dialogue){
+if (!global.game_paused && !global.in_dialogue && !global.escaped){
 
 PlayerMove();	
 AnimatePlayer();
@@ -17,7 +17,7 @@ if (held_item != noone)
 } //end of game paused check
 else if (global.in_dialogue)
 {
-	if (keyboard_check_pressed(vk_space) || keyboard_check(vk_enter))
+	if (keyboard_check(vk_space) || keyboard_check(vk_enter))
 	{
 		if (obj_dialogue_manager.can_progress)
 		{

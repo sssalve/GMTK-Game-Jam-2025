@@ -5,11 +5,13 @@ function DoSomething()
 	if (obj_player.is_on_generator && !obj_player.cur_generator.is_powered)
 	{
 		obj_player.cur_generator.is_powered = true;
+		global.generators_powered += 1;
 		instance_destroy(self, true);
 	}
 	else
 	{
 		obj_player.ate_battery = true;
+		obj_player.battery_pulse = 1;
 		ResetItem();
 	}
 }

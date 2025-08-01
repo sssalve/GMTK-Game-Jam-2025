@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_spawn_area",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_spawn_area",
   "overriddenProperties":[],
@@ -34,5 +32,5 @@
     "path":"sprites/spr_spawn_area/spr_spawn_area.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

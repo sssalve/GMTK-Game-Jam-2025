@@ -11,6 +11,6 @@ dialogue_text = "";
 
 depth = -100;
 
-min_read_time = 1.5 * ROOM_SPEED;
+min_read_time = 1.2 * ROOM_SPEED;
 read_timer = min_read_time;
 can_progress = false;

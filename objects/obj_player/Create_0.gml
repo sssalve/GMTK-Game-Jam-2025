@@ -32,7 +32,7 @@ battery_flicker = false;
 cur_death_checkpoint = noone;
 is_dead = false;
 is_on_fire = false;
-max_on_fire_time = 3 * 60; // 3 seconds
+max_on_fire_time = 1.8 * 60; // 3 seconds
 on_fire_countdown = max_on_fire_time;
 is_on_spikes = false;
 drank_poison = false;
@@ -41,6 +41,7 @@ poison_countdown = max_poison_time;
 ate_battery = false;
 max_battery_time = 3 * 60; // 3 seconds
 battery_countdown = max_battery_time;
+battery_pulse = 0;
 
 // generators
 cur_generator = noone;

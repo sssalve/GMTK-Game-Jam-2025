@@ -38,16 +38,17 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 			break;
 		case 3: // death to poison
 			dialogue_lines = [
-				"Poison sucks. Takes so long",
+				"Poison sucks. It takes so long",
 				"I think it opened a new door though",
 				"Under the lava up there"
 			]
 			break;
 		case 4: // item introduction
 			dialogue_lines = [
-				"You can use an item by pressing E or Enter",
-				"Pick them up by touching them",
-				"They are heavy, so you cant double jump with them"
+				"Nice, you opened another door!",
+				"By the way, you can pick up items by touching them",
+				"They are heavy, so you cant double jump with them",
+				"And you can use them by pressing E or Enter"
 			]
 			break;
 		case 5:
@@ -57,6 +58,34 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"If i remember correctly, the exit needs power",
 				"You will have to find a source of electricity",
 				"Then use it to power the exit door"
+			]
+		case 6: // first battery you ate, assuming no other dialogue
+			dialogue_lines = [
+				"Why would you eat a battery?",
+				"Well... you do you i guess"
+			]
+			break;
+		case 7: // ghost death
+			dialogue_lines = [
+				"Watch out for your ghost",
+				"They like to follow if you get too close"
+			]
+			break;
+		case 8:
+			dialogue_lines = [
+				"Make sure to back track",
+				"You never know where a door might've opened"
+			];
+			break;
+		case 9:
+			dialogue_lines = [
+				"You just keep looping back here dont ya"
+			]
+			break;
+		case 10:
+			dialogue_lines = [
+				"I hnestly did not think 100 deaths was possible",
+				"You really are full of surprises!"
 			]
 	}
 	

@@ -35,8 +35,6 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				instance_deactivate_object(obj_door_3);
 				global.dialogue_id = 4;
 			}
-			else {
-			}
 			ResetPlayer();
 			break;
 		case 4: // the door beneath the lava
@@ -45,7 +43,6 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				instance_deactivate_object(obj_door_4);
 				global.dialogue_id = 3;
 			}
-			else instance_activate_object(obj_door_4);
 			ResetPlayer();
 			break;
 		case 5: // spawn trapdoor
@@ -53,17 +50,29 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_5);
 			}
-			else instance_activate_object(obj_door_5);
 			ResetPlayer();
 			break;
-		case 6:
+		case 6: // door to exit from spawn
 			if (instance_exists(obj_door_6))
 			{
 				instance_deactivate_object(obj_door_6);
-				instance_activate_object(obj_door_5);
-				global.dialogue_id = -1;
+				instance_deactivate_object(obj_door_8);
 			}
-			else instance_activate_object(obj_door_6);
+			ResetPlayer();
+			break;
+		case 7: // fire gauntlet door
+			if (instance_exists(obj_door_7))
+			{
+				instance_deactivate_object(obj_door_7);
+				global.dialogue_id = 8;
+			}
+			ResetPlayer();
+			break;
+		case 8:
+			if (instance_exists(obj_door_9))
+			{
+				instance_deactivate_object(obj_door_9);
+			}
 			ResetPlayer();
 			break;
 	}

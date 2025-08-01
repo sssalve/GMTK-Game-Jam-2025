@@ -172,6 +172,9 @@ function AnimatePlayer()
 
 function CheckPlayerDeath()
 {
+	// lines for "Acheivments"
+	if (global.player_deaths >= 10) global.dialogue_id = 9;
+	if (global.player_deaths >= 100) global.dialogue_id = 10;
 	
 	// lava check-----------------------------------------------------
 	if (place_meeting(x, y, obj_lava))
@@ -228,16 +231,19 @@ function CheckPlayerDeath()
 		var _ghost = instance_nearest(x, y, obj_ghost);
 		if (_ghost.is_active)
 		{
+			global.dialogue_id = 7;
 			if (cur_death_checkpoint == noone)
 			{
 				KillPlayer();
 				ResetPlayer();
 				instance_destroy(_ghost, true);
+				global.ghost_count--;
 			}
 			else
 			{
 				KillPlayer();
 				instance_destroy(_ghost, true);
+				global.ghost_count--;
 			}	
 		}
 	}
@@ -246,10 +252,17 @@ function CheckPlayerDeath()
 	if (ate_battery)
 	{
 		battery_countdown--;
+		
+		if (battery_countdown == (max_battery_time/3)*2) battery_pulse = 2;
+		if (battery_countdown == (max_battery_time/3)) battery_pulse = 3;
+		
 		if (battery_countdown <= 0)
 		{
 			KillPlayer();
-			if (cur_death_checkpoint == noone) ResetPlayer();	
+			if (cur_death_checkpoint == noone) {
+				global.dialogue_id = 6;
+				ResetPlayer();	
+			}
 		}
 	}
 	else
@@ -270,7 +283,17 @@ function KillPlayer()
 	}
 	
 	// create ghost
-	if (!place_meeting(x, y, obj_spawn_area) && !place_meeting(x, y, obj_ghost)) instance_create_layer(x, y, "Instances", obj_ghost);
+	if (!place_meeting(x, y, obj_spawn_area) && !place_meeting(x, y, obj_ghost) && global.ghost_count < global.max_ghosts)
+	{
+		instance_create_layer(x, y, "Instances", obj_ghost);
+		global.ghost_count++;
+	}
+	else if (global.ghost_count >= global.max_ghosts && instance_exists(obj_ghost))
+	{
+		var _ghost = instance_nearest(x, y, obj_ghost);
+		instance_destroy(_ghost, true);
+		instance_create_layer(x, y, "Instances", obj_ghost);
+	}
 }
 
 function ResetPlayer()
@@ -281,6 +304,7 @@ function ResetPlayer()
 	obj_player.is_on_fire = false;
 	obj_player.drank_poison = false;
 	obj_player.ate_battery = false;
+	obj_player.battery_pulse = 0;
 	obj_player.on_fire_countdown = obj_player.max_on_fire_time;
 	obj_item.ResetItem();
 }
@@ -292,3 +316,5 @@ function CheckPlayerPickup()
 		held_item = instance_nearest(x ,y, obj_item);
 	}
 }
+
+

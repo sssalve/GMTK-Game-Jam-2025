@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_generator",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_door_9",
+  "eventList":[],
   "managed":true,
-  "name":"obj_generator",
+  "name":"obj_door_9",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Doors",
+    "path":"folders/Objects/Doors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_solid",
+    "path":"objects/obj_solid/obj_solid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_generator",
-    "path":"sprites/spr_generator/spr_generator.yy",
+    "name":"spr_pipes",
+    "path":"sprites/spr_pipes/spr_pipes.yy",
   },
   "spriteMaskId":null,
   "visible":true,
