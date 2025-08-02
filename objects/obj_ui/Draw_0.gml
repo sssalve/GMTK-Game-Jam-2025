@@ -42,9 +42,9 @@ if (room == rm_main_menu) {
             draw_text_ext(start_x, start_y+25, continue_text, -1, room_width*0.6);
             draw_set_color(c_black);
             draw_text_ext(start_x+1, start_y+26, continue_text, -1, room_width*0.6);
-			draw_text_ext(start_x, start_y+30, exit_text, -1, room_width*0.6);
+			draw_text_ext(start_x, start_y+40, exit_text, -1, room_width*0.6);
             draw_set_color(c_black);
-            draw_text_ext(start_x+1, start_y+31, exit_text, -1, room_width*0.6);
+            draw_text_ext(start_x+1, start_y+41, exit_text, -1, room_width*0.6);
 
         }
     }

@@ -1,5 +1,6 @@
 function DoSomething()
 {
+	obj_player.has_double_jump = true;
 	x = -10;
 	y = -10;
 	if (obj_player.is_on_generator && !obj_player.cur_generator.is_powered)
