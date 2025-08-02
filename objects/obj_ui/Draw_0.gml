@@ -17,6 +17,11 @@ if (room == rm_main_menu) {
         }
     }
     else {
+		draw_set_font(fnt_dialogue)
+		draw_set_color(c_white);
+		draw_text_ext(x, y, "Fastest Time: " + string(FormatTime(global.best_time)), -1, room_width*0.8);
+		draw_text_ext(x, y+12, "Least Deaths: " + string(global.least_deaths), -1, room_width*0.8);
+		
         draw_set_font(fnt_techy);
         draw_set_halign(fa_center);
         draw_set_valign(fa_middle);

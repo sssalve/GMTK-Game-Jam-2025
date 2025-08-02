@@ -50,6 +50,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_5);
 				audio_play_sound(snd_door_open, 1, false);
+				global.dialogue_id = 11;
 			}
 			ResetPlayer();
 			break;
@@ -59,6 +60,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				instance_deactivate_object(obj_door_6);
 				instance_deactivate_object(obj_door_8);
 				audio_play_sound(snd_door_open, 1, false);
+				global.dialogue_id = 5;
 			}
 			ResetPlayer();
 			break;

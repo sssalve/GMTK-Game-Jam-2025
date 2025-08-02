@@ -10,3 +10,13 @@ global.generators_powered = 0;
 global.escaped = false;
 global.exit_level = false;
 global.half_way = false;
+
+
+// game completion stuff
+global.game_completed = false;
+global.best_time = 999999;
+global.least_deaths = 999999;
+game_time = 0;
+global.escaped_with_robot = false;
+
+LoadGame();

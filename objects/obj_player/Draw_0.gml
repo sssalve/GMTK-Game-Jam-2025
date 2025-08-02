@@ -1,15 +1,29 @@
 var draw_color = c_white;
 
-if (drank_poison)
-{
-	var poison_progress = 1 - (poison_countdown / max_poison_time);
-	
-	draw_color = merge_color(
-		draw_color,
-		c_green,
-		poison_progress
-	);
-	
+if (drank_poison) {
+    var poison_progress = 1 - (poison_countdown / max_poison_time);
+    
+    var time_remaining = poison_countdown / ROOM_SPEED;
+    
+    if (time_remaining > 1) { 
+        draw_color = merge_color(
+            draw_color,
+            c_green,
+            poison_progress * 0.7
+        );
+    }
+    else {
+        var flash_speed = 10;
+        var flash_intensity = (1 + sin(player_current_time * flash_speed)) / 2;
+        
+        var flash_color = merge_color(c_green, c_red, flash_intensity);
+        
+        draw_color = merge_color(
+            draw_color,
+            flash_color,
+            0.9
+        );
+    }
 }
 
 if (ate_battery)

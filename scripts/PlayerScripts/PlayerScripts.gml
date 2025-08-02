@@ -149,6 +149,11 @@ function PlayerMove(){
 	{
 		held_item.x = x+4;
 		held_item.y = y-8;
+		if (held_item == obj_robot)
+		{
+			held_item.x = x+8;
+			held_item.y = y-12;
+		}
 	}
 }
 	
@@ -316,5 +321,9 @@ function CheckPlayerPickup()
 	if (place_meeting(x, y, obj_item) && held_item == noone)
 	{
 		held_item = instance_nearest(x ,y, obj_item);
+	}
+	if (place_meeting(x, y, obj_robot) && held_item == noone && global.generators_powered == 4)
+	{
+		held_item = obj_robot;
 	}
 }

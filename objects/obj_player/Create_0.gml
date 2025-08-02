@@ -42,6 +42,7 @@ is_on_spikes = false;
 drank_poison = false;
 max_poison_time = 10 * 60; // ten seconds
 poison_countdown = max_poison_time;
+player_current_time = 0;
 ate_battery = false;
 max_battery_time = 3 * 60; // 3 seconds
 battery_countdown = max_battery_time;

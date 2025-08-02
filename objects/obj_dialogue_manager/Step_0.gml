@@ -18,7 +18,18 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 				"Hey, you look new here...",
 				"Not much to do here, might as well just die",
 				"Go on, do it. Nothing else to do"
-			]
+			];
+			if (global.game_completed)
+			{
+				dialogue_lines = [
+					"You should try speedrunning",
+					"You can disable dialogue with CTRL + ALT + D",
+					"Or you could just play normally",
+					"Hey, you look new here...",
+					"Not much to do here, might as well just die",
+					"Go on, do it. Nothing else to do"
+				]
+			}
 			break;
 		case 1: // first death
 			dialogue_lines = [
@@ -55,9 +66,9 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 			dialogue_lines = [
 				"You seem to be making a lot of progress",
 				"You must be getting really close to the exit",
-				"If i remember correctly, the exit needs power",
-				"You will have to find a source of electricity"
+				"If i remember correctly, the exit needs power"
 			]
+			break;
 		case 6: // first battery you ate, assuming no other dialogue
 			dialogue_lines = [
 				"Why would you eat a battery?",
@@ -67,7 +78,7 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 		case 7: // ghost death
 			dialogue_lines = [
 				"Watch out for your ghost",
-				"They like to follow if you get too close"
+				"It like to follow if you get too close"
 			]
 			break;
 		case 8:
@@ -83,9 +94,17 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 			break;
 		case 10:
 			dialogue_lines = [
-				"I hnestly did not think 100 deaths was possible",
+				"I honestly did not think 100 deaths was possible",
 				"You really are full of surprises!"
 			]
+			break;
+		case 11:
+			dialogue_lines = [
+				"If you find the exit, can you help me?",
+				"I don't have legs and need to escape too",
+				"Will you come back for me?"
+			]
+			break;
 	}
 	
 	// check if dialogue is done.

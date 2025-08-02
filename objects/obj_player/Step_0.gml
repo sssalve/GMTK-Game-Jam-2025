@@ -5,6 +5,8 @@ AnimatePlayer();
 CheckPlayerDeath();
 CheckPlayerPickup();
 
+player_current_time += 1;
+
 if (held_item != noone)
 {
 	if (keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_enter))
