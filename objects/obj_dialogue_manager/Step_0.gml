@@ -1,6 +1,6 @@
 if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 {
-	if (global.dialogue_flags[global.dialogue_id] == 0)
+	if (global.dialogue_id != -1 && global.dialogue_flags[global.dialogue_id] == 0)
 	{
 		global.in_dialogue = true;
 	}
@@ -78,7 +78,7 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 		case 7: // ghost death
 			dialogue_lines = [
 				"Watch out for your ghost",
-				"It like to follow if you get too close"
+				"It likes to follow if you get too close"
 			]
 			break;
 		case 8:
@@ -107,6 +107,9 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 			break;
 	}
 	
+	// force quit on dev mode toggle (strange interction)
+	if (global.dev_mode) return;
+	
 	// check if dialogue is done.
 	if (current_line >= array_length(dialogue_lines))
 	{
@@ -126,4 +129,10 @@ if (!global.game_paused && global.dialogue_id != -1 && !global.dev_mode)
 			can_progress = true;
 		}
 	}
+}
+if (global.dev_mode)
+{
+	global.in_dialogue = false;
+	global.dialogue_id = -1;
+	current_line = 0;
 }
