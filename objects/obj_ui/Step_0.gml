@@ -1,5 +1,7 @@
-if (instance_exists(obj_camera))
-{
-	x = camera_get_view_x(view_camera[0]);
-	y = camera_get_view_y(view_camera[0]);
+if (room == rm_main_menu) {
+    flash_timer += flash_speed;
+    
+    flash_alpha = 0.5 + abs(sin(flash_timer)) * 0.5;
+    
+    show_text = (sin(flash_timer) > 0);
 }

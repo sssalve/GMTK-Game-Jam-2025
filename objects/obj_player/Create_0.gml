@@ -1,4 +1,8 @@
 move_speed = 1.8;
+acceleration = 0.15;
+deceleration = 0.25;
+air_control = 0.15;
+current_hsp = 0;
 jump_force = -3.6;
 p_gravity = 0.2;
 max_fall_speed = 8;

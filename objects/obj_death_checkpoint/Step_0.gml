@@ -14,10 +14,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 				{
 					instance_deactivate_object(obj_door_1);
 					global.dialogue_id = 1;
-				}
-				else {
-					instance_activate_object(obj_door_1); //instance_create_layer(672, 240, "Instances", obj_door_1);
-					global.dialogue_id = 2;				
+					audio_play_sound(snd_door_open, 1, false);
 				}
 				ResetPlayer();	
 			}
@@ -26,6 +23,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			if (instance_exists(obj_door_2))
 			{
 				instance_deactivate_object(obj_door_2);
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -34,6 +32,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_3);
 				global.dialogue_id = 4;
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -42,6 +41,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_4);
 				global.dialogue_id = 3;
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -49,6 +49,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			if (instance_exists(obj_door_5) && _player.drank_poison)
 			{
 				instance_deactivate_object(obj_door_5);
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -57,6 +58,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_6);
 				instance_deactivate_object(obj_door_8);
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -65,6 +67,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			{
 				instance_deactivate_object(obj_door_7);
 				global.dialogue_id = 8;
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;
@@ -72,6 +75,7 @@ if (obj_player.cur_death_checkpoint == self.id && obj_player.is_dead)
 			if (instance_exists(obj_door_9))
 			{
 				instance_deactivate_object(obj_door_9);
+				audio_play_sound(snd_door_open, 1, false);
 			}
 			ResetPlayer();
 			break;

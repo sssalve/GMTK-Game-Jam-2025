@@ -31,6 +31,8 @@ function PlayerMove(){
 	}
 
 	// horizontal move
+	
+	
 	var move = (key_right - key_left) * move_speed;
 	hsp = move;
 
@@ -74,11 +76,17 @@ function PlayerMove(){
 
 	if (jump_buffer_timer > 0) {
 	    if (coyote_timer > 0) { // Can jump during coyote time
+			// play sound
+			audio_sound_pitch(snd_jump, random_range(0.8, 1.2));
+			audio_play_sound(snd_jump, 1, false);
 	        vsp = jump_force;
 	        coyote_timer = 0; // consume coyote time
 	        jump_buffer_timer = 0;
 	        grounded = false;
 	    } else if (has_double_jump) {
+			// play sound
+			audio_sound_pitch(snd_jump, random_range(0.8, 1.2));
+			audio_play_sound(snd_jump, 1, false);
 	        vsp = jump_force * 0.9;
 	        has_double_jump = false;
 	        jump_buffer_timer = 0;
@@ -288,6 +296,9 @@ function KillPlayer()
 
 function ResetPlayer()
 {
+	// play sound
+	audio_sound_pitch(snd_death, random_range(0.9, 1.1));
+	audio_play_sound(snd_death, 2, false, 0.5);
 	obj_player.x = obj_player.reset_x;
 	obj_player.y = obj_player.reset_y;
 	obj_player.is_dead = false;

@@ -9,3 +9,4 @@ global.dev_mode = false; // no dialogue triggers
 global.generators_powered = 0;
 global.escaped = false;
 global.exit_level = false;
+global.half_way = false;

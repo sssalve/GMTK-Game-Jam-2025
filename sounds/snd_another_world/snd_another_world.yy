@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_another_world",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":121.304375,
+  "name":"snd_another_world",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_another_world.wav",
+  "type":0,
+  "volume":1.0,
+}
