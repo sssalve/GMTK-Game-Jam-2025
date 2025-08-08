@@ -4,6 +4,7 @@ global.player_deaths = 0;
 global.game_paused = false;
 global.in_dialogue = false;
 global.dev_mode = false; // no dialogue triggers
+global.volume = 1;
 
 // door generators powerd flags
 global.generators_powered = 0;

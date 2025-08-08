@@ -41,6 +41,7 @@
   "name":"GameJam_2025",
   "resources":[
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},
+    {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"fnt_techy","path":"fonts/fnt_techy/fnt_techy.yy",},},
     {"id":{"name":"plan","path":"notes/plan/plan.yy",},},
     {"id":{"name":"References","path":"notes/References/References.yy",},},

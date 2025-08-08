@@ -9,3 +9,14 @@ start_x = room_width/2;
 start_y = room_height/2;
 
 depth = -100;
+
+current_menu_item = 0;
+menu_cooldown = 0;
+volume_level = round(global.volume * 10);
+
+menu_items = [
+	"Continue",
+	"Main Menu",
+	"Volume: <" + string(volume_level) + ">",
+	"Reset Game Data"
+];

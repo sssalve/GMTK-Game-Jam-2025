@@ -6,11 +6,14 @@ if (room = rm_main_menu)
 	{
 		global.current_room = rm_level;
 		global.player_deaths = 0;
-		global.half_way = false;
+		global.generators_powered = 0;
 		global.escaped = false;
+		global.exit_level = false;
+		global.half_way = false;
 		global.in_dialogue = false
 		global.game_paused = false;
 		global.escaped_with_robot = false;
+		game_time = 0;
 		room_goto(rm_level);
 	}
 	if (keyboard_check_pressed(vk_escape))
@@ -20,7 +23,8 @@ if (room = rm_main_menu)
 }
 else if (room = rm_level)
 {
-	game_time++;
+	
+	if (!global.game_paused) game_time++;
 	
 	if (keyboard_check_pressed(vk_escape)) global.game_paused = !global.game_paused;
 	

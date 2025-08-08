@@ -19,8 +19,9 @@ if (room == rm_main_menu) {
     else {
 		draw_set_font(fnt_dialogue)
 		draw_set_color(c_white);
-		draw_text_ext(x+3, y, "Fastest Time: " + string(FormatTime(global.best_time)), -1, room_width*0.8);
-		draw_text_ext(x+3, y+12, "Least Deaths: " + string(global.least_deaths), -1, room_width*0.8);
+		draw_text_ext(x+3, y+2, "Current Attempt Time: " + string(FormatTime(obj_game_control.game_time)), -1, room_width*0.8);
+		draw_text_ext(x+3, y+14, "Fastest Time: " + string(FormatTime(global.best_time)), -1, room_width*0.8);
+		draw_text_ext(x+3, y+26, "Least Deaths: " + string(global.least_deaths), -1, room_width*0.8);
 		
         draw_set_font(fnt_techy);
         draw_set_halign(fa_center);

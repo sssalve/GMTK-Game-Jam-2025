@@ -6,6 +6,7 @@ function SaveGame(){
 	save_data[? "game_completed"] = global.game_completed;
 	save_data[? "best_time"] = global.best_time;
 	save_data[? "least_deaths"] = global.least_deaths;
+	save_data[? "volume"] = global.volume;
 	
 	var json_string = json_encode(save_data);
 	
@@ -28,7 +29,7 @@ function LoadGame() {
 		// completed check
 		if (ds_map_exists(save_data, "game_completed")) 
 		{ 
-			global.game_completed = save_data[? "game_completed"]
+			global.game_completed = save_data[? "game_completed"];
 		}
 		// best time check
 		if (ds_map_exists(save_data, "best_time"))
@@ -38,7 +39,12 @@ function LoadGame() {
 		// least deaths check
 		if (ds_map_exists(save_data, "least_deaths"))
 		{
-			global.least_deaths = save_data[? "least_deaths"]
+			global.least_deaths = save_data[? "least_deaths"];
+		}
+		// volume check
+		if (ds_map_exists(save_data, "volume"))
+		{
+			global.volume = save_data[? "volume"];
 		}
 		
 		ds_map_destroy(save_data);
