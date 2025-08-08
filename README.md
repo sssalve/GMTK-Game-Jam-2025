@@ -1,4 +1,4 @@
-# 🔁 KILLOOP
+# KILLOOP
 
 **A Deathloop Puzzle Platformer**  
 Created for the GMTK 2025 Game Jam  
@@ -6,7 +6,7 @@ Theme: “Loop”
 
 ---
 
-## 📖 Description
+## Description
 
 You are trapped inside a broken, glitched maze.  
 The only way forward is through **death**.  
@@ -16,7 +16,7 @@ Experiment, explore, and embrace the loop to find your way out.
 
 ---
 
-## 🕹 How to Play
+## How to Play
 
 ### Controls
 - **Move**: `Arrow Keys` or `WASD`
@@ -31,7 +31,7 @@ Experiment, explore, and embrace the loop to find your way out.
 
 ---
 
-## 💀 Death Types
+## Death Types
 
 - **Spikes** → Instant kill; great for precision platforming.
 - **Lava** → Burns over 3 seconds; survivable if you get out fast.
@@ -41,14 +41,14 @@ Experiment, explore, and embrace the loop to find your way out.
 
 ---
 
-## 🧠 Tips
+## Tips
 - Most puzzles require dying **intentionally** to progress.
 - Items restrict your movement; plan your path carefully.
 - Ghosts can be obstacles… or tools.
 
 ---
 
-## 📦 Asset Credits
+## Asset Credits
 
 All assets were either created during the jam or sourced from free/public domain libraries.
 
@@ -65,6 +65,6 @@ All assets were either created during the jam or sourced from free/public domain
 
 ---
 
-## 🙌 Thanks for Playing!
+## Thanks for Playing!
 
 If you enjoyed **Killoop**, please rate it and leave feedback on the [itch.io page](https://ssalve.itch.io/killoop-gmtk-gamejam)!
