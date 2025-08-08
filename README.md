@@ -1,6 +1,6 @@
 # 🔁 KILLOOP
 
-**A Deathloop Metroidvania Platformer**  
+**A Deathloop Puzzle Platformer**  
 Created for the GMTK 2025 Game Jam  
 Theme: “Loop”
 
