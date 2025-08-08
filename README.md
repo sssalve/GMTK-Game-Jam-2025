@@ -53,7 +53,6 @@ Experiment, explore, and embrace the loop to find your way out.
 All assets were either created during the jam or sourced from free/public domain libraries.
 
 ### Art
-- [Lee Carlson](https://open.spotify.com/artist/0w2FYJFs5Ze1YevXz3E5mh?si=UI5NP0oySpeSuMmXGQ8K6g)
 - [Base Tileset](https://anokolisa.itch.io/sidescroller-shooter-central-city)
 
 ### Sound
