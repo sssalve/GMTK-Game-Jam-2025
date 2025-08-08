@@ -67,4 +67,4 @@ All assets were either created during the jam or sourced from free/public domain
 
 ## 🙌 Thanks for Playing!
 
-If you enjoyed **Killoop**, please rate it and leave feedback on the itch.io page!
+If you enjoyed **Killoop**, please rate it and leave feedback on the [itch.io page](https://ssalve.itch.io/killoop-gmtk-gamejam)!
