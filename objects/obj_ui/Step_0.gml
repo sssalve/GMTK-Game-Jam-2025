@@ -54,6 +54,10 @@ if (global.game_paused)
                 case 3: 
                     if (file_exists("save_data.json")) {
                         file_delete("save_data.json");
+						global.best_time = 99999;
+						global.least_deaths = 99999;
+						global.volume = 1;
+						global.game_completed = false;
                     }
                     break;
             }

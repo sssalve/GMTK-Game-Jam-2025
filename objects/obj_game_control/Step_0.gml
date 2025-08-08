@@ -29,7 +29,7 @@ else if (room = rm_level)
 	if (keyboard_check_pressed(vk_escape)) global.game_paused = !global.game_paused;
 	
 	// half way check
-	if (global.generators_powered >= 2)
+	if (global.generators_powered >= 1)
 	{
 		global.half_way = true;
 	}
