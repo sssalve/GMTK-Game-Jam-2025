@@ -53,21 +53,16 @@ Experiment, explore, and embrace the loop to find your way out.
 All assets were either created during the jam or sourced from free/public domain libraries.
 
 ### Art
-- [Insert tileset/sprite name] — by [Author] ([License])
-- [Insert particle/effects pack] — by [Author] ([License])
+- [Lee Carlson](https://open.spotify.com/artist/0w2FYJFs5Ze1YevXz3E5mh?si=UI5NP0oySpeSuMmXGQ8K6g)
+- [Base Tileset](https://anokolisa.itch.io/sidescroller-shooter-central-city)
 
 ### Sound
-- [Insert sound effect name/source] — by [Author] ([License])
-- [Insert background music source] — by [Author] ([License])
+- [Lee Carlson](https://open.spotify.com/artist/0w2FYJFs5Ze1YevXz3E5mh?si=UI5NP0oySpeSuMmXGQ8K6g)
+- [Jump Sound](https://freesound.org/people/cabled_mess/sounds/350898)
+- [Death Sound](https://freesound.org/people/LilMati/sounds/495541)
 
 ### Fonts
-- [Insert font name] — by [Author] ([License])
-
----
-
-## 📜 License
-
-
+- [Title Font](https://www.fontspace.com/aeogo-pixellated-font-f113784)
 
 ---
 
